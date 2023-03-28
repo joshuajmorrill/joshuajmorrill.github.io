@@ -68,7 +68,6 @@ h4 {
 	clear: left;
 }
 
-
 nav {
 	text-align: center;
 	font-size: 1.5em;
@@ -116,6 +115,10 @@ h2, h3, h4, p, div, ul, dl {
 	padding-right: 1em;
 }
 
+main ul {
+	padding-left: 2em;
+}
+
 .details {
 	padding-left: 20%;
 	padding-right: 20%;
@@ -149,6 +152,13 @@ img {
 	background-size: 100% 100%;
 }
 
+#herojobs {
+	height: 300px;
+	background-image: url(images/coffeecup.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
 #mobile {
 	display: inline;
 }
@@ -166,7 +176,35 @@ footer {
 	border-top: 2px solid #8C3826;
 }
 
-/* Configure Medium Layout */
+table {
+	margin: auto;
+	width: 90%;
+	border-spacing: 0;
+}
+
+th,
+td {
+	padding: 10px;
+}
+
+tr:nth-of-type(odd) {
+	background-color: #D2B48E;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1em;
+	width: 80%;
+}
+
+input,
+textarea {
+	margin-bottom: .5em;
+}
+
+
+/*Medium Layout */
 @media (min-width: 600px) {
 	header {
 	padding-left: 0;
@@ -221,9 +259,27 @@ footer {
 	margin-left: 10%;
 	margin-right: 10%;
 	}
+
+	form {
+	width: 40%;
+	display: grid;
+	grid-gap: 1em;
+	gap: 1em;
+	grid-template-columns: 6em 1fr;
+	}
+
+	input[type="submit"] {
+	grid-column: 2 / 3;
+	width: 9em;
+	}
+
+	#herojobs {
+	background-image: url(images/herojobs.jpg)
+	}
+
 }
 
-/* Configure Large Layout */
+/*Large Layout */
 @media (min-width: 1024px) {
 	@supports (display: grid) {
 		header {
